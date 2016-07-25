@@ -1,6 +1,6 @@
 package sml
 
-/** A DIVInstruction.
+/** A DivInstruction.
   * Creates a new div instruction that divides one value by another value and stores the result.
   * @author Charlene Ferguson
   * @constructor creates a new div instruction that divides one value by another value and stores the result.
@@ -11,7 +11,7 @@ package sml
   * @param op2 identifier for a register or storage value
   */
 
-class DIVInstruction(label: String, op: String, val result: Int, val op1: Int, val op2: Int)
+class DivInstruction(label: String, op: String, val result: Int, val op1: Int, val op2: Int)
   extends Instruction(label, op) {
 
   /**
@@ -31,7 +31,7 @@ class DIVInstruction(label: String, op: String, val result: Int, val op1: Int, v
   }
 }
 
-object DIVInstruction {
+object DivInstruction {
   def apply(label: String, result: Int, op1: Int, op2: Int) =
-    new DIVInstruction(label, "div", result, op1, op2)
+    new DivInstruction(label, "div", result, op1, op2)
 }

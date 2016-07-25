@@ -11,7 +11,7 @@ package sml
   * @param register2 location register for a value
   */
 
-class MULInstruction(label: String, op: String, val resultRegister: Int, val register1: Int, val register2: Int)
+class MulInstruction(label: String, op: String, val resultRegister: Int, val register1: Int, val register2: Int)
   extends Instruction(label, op) {
 
 /**
@@ -32,7 +32,7 @@ class MULInstruction(label: String, op: String, val resultRegister: Int, val reg
   }
 }
 
-object MULInstruction {
+object MulInstruction {
   def apply(label: String, result: Int, op1: Int, op2: Int) =
-    new MULInstruction(label, "mul", result, op1, op2)
+    new MulInstruction(label, "mul", result, op1, op2)
 }

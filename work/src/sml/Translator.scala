@@ -2,8 +2,8 @@ package sml
 
 import java.lang.reflect.Constructor
 
-
 import scala.collection.mutable.ArrayBuffer
+import scala.io.Source
 
 /**
   * The translator of a <b>S</b><b>M</b>al<b>L</b> program.
@@ -28,7 +28,6 @@ class Translator(fileName: String) {
   def readAndTranslate(m: Machine): Machine = {
     val labels = m.labels
     var program = m.prog
-    import scala.io.Source
     val lines = Source.fromFile(fileName).getLines
     for (line <- lines) {
       val fields = line.split(" ")

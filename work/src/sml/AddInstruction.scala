@@ -11,7 +11,7 @@ package sml
   * @param register2 location register for a value
   */
 
-class ADDInstruction(label: String, op: String, val resultRegister: Int, val register1: Int, val register2: Int)
+class AddInstruction(label: String, op: String, val resultRegister: Int, val register1: Int, val register2: Int)
   extends Instruction(label, op) {
 
 
@@ -31,7 +31,7 @@ class ADDInstruction(label: String, op: String, val resultRegister: Int, val reg
   }
 }
 
-object ADDInstruction {
+object AddInstruction {
   def apply(label: String, result: Int, op1: Int, op2: Int) =
-    new ADDInstruction(label, "add", result, op1, op2)
+    new AddInstruction(label, "add", result, op1, op2)
 }

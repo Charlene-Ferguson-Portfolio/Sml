@@ -1,6 +1,6 @@
 package sml
 
-/** An SUB Instruction.
+/** An Sub Instruction.
   * Subtracts a value from another value and stores the result in a register (storage of memory).
   * @constructor creates a new sub instruction with a label for the line number, operation type and registers.
   * @param label is the label for the line.
@@ -10,7 +10,7 @@ package sml
   * @param register2 location register for a value
   */
 
-class SUBInstruction(label: String, op: String, val result: Int, val register1: Int, val register2: Int)
+class SubInstruction(label: String, op: String, val result: Int, val register1: Int, val register2: Int)
     extends Instruction(label, op) {
 
   /** Subtracts a value from another value and stores the result in a register. */
@@ -25,8 +25,8 @@ class SUBInstruction(label: String, op: String, val result: Int, val register1: 
     }
   }
 
-  object SUBInstruction {
+  object SubInstruction {
     def apply(label: String, result: Int, op1: Int, op2: Int) =
-      new SUBInstruction(label, "sub", result, op1, op2)
+      new SubInstruction(label, "sub", result, op1, op2)
   }
 
